@@ -1,0 +1,387 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>图论の奇技淫巧 - iMeThi7ck</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="John Doe">
+<meta name="description" content="包括但不限于反向建边、虚点连边、线段树优化建边、图论建模、拆点构图">
+<meta name="keywords" content="">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    
+
+<link rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?49823558">
+
+
+<link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/11.2.0/styles/github.min.css" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+<div id="top"></div>
+
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="http://example.com">
+                Home
+            </a>
+
+            
+                
+                    <a class="a-block drawer-menu-item false"
+                       href="/archives/">
+                        归档
+                    </a>
+                
+                    <a class="a-block drawer-menu-item false"
+                       href="/tags/">
+                        标签
+                    </a>
+                
+                    <a class="a-block drawer-menu-item false"
+                       href="/friends/">
+                        朋友们
+                    </a>
+                
+                    <a class="a-block drawer-menu-item false"
+                       href="/about-me/">
+                        关于我
+                    </a>
+                
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iMeThi7ck
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iMeThi7ck</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iMeThi7ck's Blog
+        </div>
+        <div class="nav-subtitle">
+            寓清于浊，以屈为伸
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+            
+                <a class="a-block nav-link-item false"
+                   href="/archives/">
+                    归档
+                </a>
+            
+                <a class="a-block nav-link-item false"
+                   href="/tags/">
+                    标签
+                </a>
+            
+                <a class="a-block nav-link-item false"
+                   href="/friends/">
+                    朋友们
+                </a>
+            
+                <a class="a-block nav-link-item false"
+                   href="/about-me/">
+                    关于我
+                </a>
+            
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2024 <a href="http://example.com">iMeThi7ck</a>
+    </div>
+</div>
+
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('https://z4a.net/images/2019/02/25/k1ef821096fa7bd112.png')">
+                <div class="post-title">
+                    图论の奇技淫巧
+                    <div class="post-meta">
+                        <time datetime="2020-02-09T06:00:00.000Z" itemprop="datePublished">
+                            2020-02-09 14:00
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/Graph-theory/'>Graph theory</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E5%BC%8F%E5%89%8D%E5%90%91%E6%98%9F%E5%AD%98%E5%9B%BE"><span class="toc-number">1.</span> <span class="toc-text">链式前向星存图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%90%91%E5%BB%BA%E8%BE%B9"><span class="toc-number">2.</span> <span class="toc-text">反向建边</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E7%82%B9%E8%BF%9E%E8%BE%B9"><span class="toc-number">3.</span> <span class="toc-text">虚点连边</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%BF%E6%AE%B5%E6%A0%91%E4%BC%98%E5%8C%96%E5%BB%BA%E8%BE%B9"><span class="toc-number">4.</span> <span class="toc-text">线段树优化建边</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%86%E7%82%B9%E6%9E%84%E5%9B%BE"><span class="toc-number">5.</span> <span class="toc-text">拆点构图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E8%AE%BA%E5%BB%BA%E6%A8%A1"><span class="toc-number">6.</span> <span class="toc-text">图论建模</span></a></li></ol>
+                    <p>图论，其实是数学的一门分支，它以图为研究对象。最基础的图论应该是著名的哥尼斯堡七桥问题，那是一个经典的一笔画问题。</p>
+<p>竞赛中我们比较常见的是 <strong>最短路算法 最小生成树算法 拓扑排序</strong> 等等。</p>
+<p>本篇文章我们不说那些大家都懂烂了的图论算法，讲一些实用的 <del>(没什么用的)</del> 图论小技巧。</p>
+<h2 id="链式前向星存图"><a href="#链式前向星存图" class="headerlink" title="链式前向星存图"></a>链式前向星存图</h2><p>最最基础的存图的基本分为两种，使用二维数组和使用 $vector$ ，但这两种方法都有所缺陷。</p>
+<p>使用二维数组查询速度很快，但空间复杂度是 $O(n^2)$ 的，一般的题目都接受不了。</p>
+<p>使用 $vector$ 可以减少空间复杂度，但是时间就比较不确定了。</p>
+<p>所以就出现了一种神奇的存图方式，<strong>链表思想的链式前向星</strong>。</p>
+<p>我们通常使用以下数组来完成</p>
+<details>
+<summary>$Codes$</summary>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int w[i]//第 i 条边的权值</span><br><span class="line">int to[i]//第 i 条边的终点</span><br><span class="line">int nxt[i]//下一条的边的编号，不建议叫 next，会挂</span><br><span class="line">int head[i]//以 i 为起始点的第一条边</span><br><span class="line">int tot//边的编号</span><br></pre></td></tr></table></figure>
+</details>
+
+<p>新增加一条边的时候我们进行如下操作</p>
+<details>
+<summary>$Codes$</summary>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void add(int x,int y,int z)&#123;</span><br><span class="line">    tot++;//新边的编号</span><br><span class="line">    to[tot]=y;//新一条边的信息</span><br><span class="line">    w[tot]=z;</span><br><span class="line">    nxt[tot]=head[x];</span><br><span class="line">    head[x]=tot;//更新以 x 为起始点的第一条边</span><br><span class="line">&#125;</span><br><span class="line">//这样是单向边，双向边要再来一次</span><br></pre></td></tr></table></figure>
+</details>
+
+<p>用下面这种方式就可以枚举出所有以 xx 为起始点的边。</p>
+<details>
+<summary>$Codes$</summary>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for(int i=head[x];i;i=nxt[i])&#123;// i 即为该边编号</span><br><span class="line">    //to[i]为可以到达的点头</span><br><span class="line">    //w[i]为这条边的权值</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+<p>大致思想就是将所有以 $x$ 为起始点的边以链表的形式储存，枚举的时候遍历链表，直到边的编号为 $0$ (为 $0$ 表示没有其他的边了)</p>
+<p>这样就可以满足我们从某个点遍历枚举下个点的需要。</p>
+<p>前向星链表被疯狂应用在各个图论题目中，基本上是一个图论题都可以用到吧，属于非常基础的图论技能。</p>
+<p><strong>需要注意的是对于双向边的题目，链式前向星的数组需要开边数的两倍，不然会 $RE$ 。</strong></p>
+<h2 id="反向建边"><a href="#反向建边" class="headerlink" title="反向建边"></a>反向建边</h2><p>对于一个有向图，某些问题中我们需要反向建边来完成操作</p>
+<p>比如求其他 $n$ 个点到 $k$ 点的最短路。</p>
+<p><del>对每个点跑一遍最短路不就好了吗？</del></p>
+<p>事实上我们只需要跑一遍最短路就可以了，只需要把边反向建。</p>
+<p>反向建图情况下 $k$ 点到每个点的最短路就是正常情况下该点到 $k$ 点的最短路。</p>
+<p>例题 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1629">P1629 邮递员送信</a></p>
+<p>不只是最短路问题，在遍历问题上也可以使用反向建边来完成</p>
+<p>例题 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3916">P3916 图的遍历</a></p>
+<p>是否需要反向建边，根据题意判断即可。</p>
+<p>反向建边还可以来判断某条边是否在最短路上。</p>
+<p>对于一个有向图，我们从 11 号点跑一遍正向的最短路 $dis[]$ ，从 $n$ 号点跑一遍反向的最短路 $dis1[]$<br>如果 $dis[x]+w(x,y)+dis1[y]&#x3D;dis[n]$ 那么我们就可以得出，这条边是在 $1$ 到 $n$ 的最短路上的。</p>
+<p>当然如果是无向图的话直接跑就可以了。</p>
+<h2 id="虚点连边"><a href="#虚点连边" class="headerlink" title="虚点连边"></a>虚点连边</h2><p>虚点连边是一种很有效的优化建边复杂度的方式</p>
+<p>我们可能会遇见这样一种题，给你几个点，其他的点离这些给出的点的最近距离是多少。</p>
+<p>我们可以对于每一个点进行 $Spfa$，但似乎这样并不是很好操作。</p>
+<p>我们可以自己给出一个点，然后向每个被标记的点连一条单向边，这样就只需要进行一次 $Spfa$ 就可以了。</p>
+<p>举个例子，橙色为标记点，数字为最近距离。</p>
+<p><img src="https://z4a.net/images/2019/02/25/k1ef821096fa7bd112.png"></p>
+<p>例题 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3393">P3393 逃离僵尸岛</a></p>
+<p>但似乎这个直接广搜也可以。</p>
+<p>如果对于两个点集 $A$ 和 $B$，你需要对 $A$ 中的每一个点向 $B$ 中的每一个点都建一条边，如果直接操作，复杂度很明显是 $O(n^2)$ 的，有没有更快的方法呢？</p>
+<p>我们可以建一个虚点 $P$ ，然后对 $A$ 里的每一个点向 $P$ 连一条单向边边，然后对 $P$ 向 $B$ 中的每一个点建一条单向边，这样只需要 $O(2n)$ 的复杂度就可以完成了。</p>
+<p>画个图理解一下。</p>
+<p>(优化前)</p>
+<p><img src="https://z4a.net/images/2019/02/25/k2.png"></p>
+<p>(优化后)</p>
+<p><img src="https://z4a.net/images/2019/02/25/k3.png"></p>
+<p>例题 <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1983">P1983 车站分级</a></p>
+<p>虚点连边只是听起来很高大上的操作，但实际上很简单。</p>
+<p>对于有边权的情况，虚点连得边的边权需要注意(一般为 $0$ )</p>
+<h2 id="线段树优化建边"><a href="#线段树优化建边" class="headerlink" title="线段树优化建边"></a>线段树优化建边</h2><p>说到优化建边，就一定要介绍一下线段树优化建边了。</p>
+<p>这也是一个听起来非常高大上但实际上不是很难的技巧。</p>
+<p>给你一个点 $X$ ，让你和一个点集里的每一个点都连一条边。看起来并没有什么好方法，只能乖乖地一个一个连</p>
+<p>如果这个点集是连续的呢？我们就可以用线段树来优化建边了。</p>
+<p>我们知道线段树是这个结构的</p>
+<p><img src="https://z4a.net/images/2019/02/25/k4.png"></p>
+<p>我们知道，线段树的点是能够代表一段区间的，那么我们怎样应用这个性质呢？</p>
+<p>首先，我们需要对于线段树的每个父亲与他的儿子建一条单向边，效果如下 </p>
+<p><img src="https://z4a.net/images/2019/02/25/k5.png"></p>
+<p>这有什么用呢？因为我们所要求的点集是一段连续的区间，而线段树的结点可以表示某一段区间，我们可以在线段树上找到对应的区间，然后向线段树上的点建边，就可以加快建边速度了。</p>
+<p>例如我们要向 $[1,8]$ 里的所有点建边，我们只需要将 $X$ 和线段树上 $[1,8]$ 那个点连一条单向边就可以了。</p>
+<p>$[2,6]$ 的例子</p>
+<p><img src="https://z4a.net/images/2019/02/25/k6.png"></p>
+<p>我们在线段树上的边边权一般都是 $0$ ，边权直接赋给 $X$ 连到线段树上的那条边即可</p>
+<p>建树和寻找的代码和普通线段树差不多。需要注意的是线段树上结点的编号不要和已有的点重复，最后的结点直接连上该点就好。</p>
+<details>
+<summary>$Codes$</summary>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">void build(int &amp;p,int l,int r)&#123;</span><br><span class="line">    if(l==r)&#123;</span><br><span class="line">        p=l;</span><br><span class="line">        return ;</span><br><span class="line">    &#125;</span><br><span class="line">    p=++cnt;//点的编号</span><br><span class="line">    int mid=l+r&gt;&gt;1;</span><br><span class="line">    build(lc[p],l,mid);build(rc[p],mid+1,r);</span><br><span class="line">    add(lc[p],p,0);add(rc[p],p,0);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void update(int p,int l,int r,int x,int L,int R,int z)&#123;</span><br><span class="line">    if(L&lt;=l &amp;&amp; r&lt;=R)&#123;</span><br><span class="line">        add(x,p,z);</span><br><span class="line">        return ;</span><br><span class="line">    &#125;</span><br><span class="line">    int mid=l+r&gt;&gt;1;</span><br><span class="line">    if(L&lt;=mid)&#123;</span><br><span class="line">        update(lc[p],l,mid,x,L,R,z);</span><br><span class="line">    &#125;</span><br><span class="line">    if(R&gt;mid) &#123;</span><br><span class="line">        update(rc[p],mid+1,r,x,L,R,z);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</details>
+
+<p>例题 <a target="_blank" rel="noopener" href="https://www.luogu.org/problemnew/show/CF786B">CF786B Legacy</a></p>
+<p>这道题还涉及到了区间向某一个点连边的情况，我们再建一个棵线段树在树上反向建边就可以了</p>
+<h2 id="拆点构图"><a href="#拆点构图" class="headerlink" title="拆点构图"></a>拆点构图</h2><p>有些时候我们并不能用一个点来代表一个点（雾）</p>
+<p>诶我不是这个意思。我的意思是用几个点来表示一个点的不同情况。</p>
+<p>随机口胡的一道题</p>
+<p>一个图，每条边上有 $k$ 个权值，第 $i$ 次行走消耗的代价是第 $i%k+1$ 个权值，求某一个点的单源最短路径。 $( k$很小$)$</p>
+<p>看起来直接跑 $dij$ 和 $spfa$ 是不对的，可以自举反例。</p>
+<p>可以使用 $dfs$ ，用 $dis[i][j]$ 表示到第 $i$ 个点走了 $m$ 步且 $m%k+1&#x3D;j$ 的最短方案，但这样太慢了。</p>
+<p>我们可以使用拆点的思想，对于一个点 $i$ ，将它拆为 $i , i+n , i+2*n , …$ 这样的 $k$ 个点，作为到这个点的步数模 $k$ 不同情况的替代点。</p>
+<p>然后我们连边的时候对某一种情况赋不同情况的权值，大概下面这样？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//我们要对 x 到 y 连三种边 w1 w2 w3</span><br><span class="line">add(x,y+n,w1);</span><br><span class="line">add(x+n,y+2*n,w2);</span><br><span class="line">add(x+2*n,y,w3);</span><br></pre></td></tr></table></figure>
+
+<p>来一张图</p>
+<p><img src="https://z4a.net/images/2019/02/25/k7.png"></p>
+<p>然后在得到的图上跑最短路就可以了，答案要枚举到终点的情况。</p>
+<p>类似的例题 <a target="_blank" rel="noopener" href="https://www.luogu.org/problemnew/show/P4568">P4568 飞行路线</a></p>
+<h2 id="图论建模"><a href="#图论建模" class="headerlink" title="图论建模"></a>图论建模</h2><p>似乎……一些背包问题可以用最短路解决，只是没什么必要。</p>
+<p>$Let us AC it–$题面</p>
+<p>$Kodak$开了一家小店赚外快，因为店小，所以只有 $n$ 种不同价格的商品卖，不过好在批发商给力，货源充足，所以每种商品都有无限件。</p>
+<p>因为各种原因，有时候顾客会对购买的总价有特殊的要求，比如计算机科学家泰玛仕一定要总价 $1024$ ，给小姐姐买礼物的面包需要总价 $520$ 或者 $1314$ ，或者纯粹来找茬的张三要买$0$元商品</p>
+<p>但是$Kodak$店里不一定有 $1$ 元的商品，所以并不是所有价格都凑得出来，所以他需要一个程序解决能知道某一个总价能否凑出</p>
+<p>看起来可以用完全背包解决这个问题，但是这道题的数据范围不太友好。</p>
+<p>商品数 $N &lt;&#x3D; 1000$  \  商品价格 $a_i &lt;&#x3D; 20000$<br>顾客数 $M &lt;&#x3D; 300000$  \ 需求价格 $b_i &lt;&#x3D; 40000000$</p>
+<p>如果打完全背包，复杂度会爆炸。$TAT$</p>
+<p>其实这个问题就是 $a_1<em>x_1+a_2</em>x_2+a_3*x_3+…?&#x3D;k$ 的问题。我们考虑 $“$同余 $+$ 最短路$”$</p>
+<p>依题意得，如果 $k$ 满足要求，那么 $a_m<em>k$ 必定也满足条件。我们可以先给它填一堆 $a_m$ ，然后减去 $p$ 个 $a_m$ ，用剩下的 $a_i$ 表示 $p</em>a_m+k%a_m$ 设当 $b%a_m&#x3D;i$时，需要的最小的 $k×a_m+i$ 为 $dis[i]$ ，剩下的即可用最短路的思想来更新，</p>
+<p>跑最短路的过程基本如下</p>
+<pre><code>memset(dis,0x3f,sizeof(dis));
+dis[0]=0;
+q.push(0);
+while(q.size())&#123;
+    int x=q.top();
+    q.pop();
+    if(v[x]) continue;
+    v[x]=1;
+    for(int i=1;i&lt;=n;i++)&#123;
+        int y=(x+a[i])%mod;
+        if(dis[y]&gt;dis[x]+a[i])&#123;
+            dis[y]=dis[x]+a[i];
+            q.push(y);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>可能不是太好理解，结合样例手推一下吧</p>
+<hr>
+<p>又一道例题</p>
+<p>给出 $n$ 个 长度为 $m$ 的 $01$ 串，让你确定一个长度相同的 $01$ 串，该串和给出的串中不同的位数最多。</p>
+<p>一道看起来跟图论毫无关系的题，其实也可以当作图论来做</p>
+<p>我们可以建一个 $2^m$ 的图，每个点都与和自身不同位数为 $1$ 的点连一条长度为 $1$ 的边，然后跑 $bfs$，得到最远距离的那个点即为所求。</p>
+<details>
+<summary>广搜代码</summary>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">while(h&lt;=t)&#123;</span><br><span class="line">    int x=v[h];</span><br><span class="line">    for(int i=1;i&lt;=m;i++)&#123;</span><br><span class="line">        int z=x^(1&lt;&lt;(i-1));</span><br><span class="line">        if(f[z]==0)&#123;</span><br><span class="line">            f[z]=1;</span><br><span class="line">            t++;</span><br><span class="line">            v[t]=z;</span><br><span class="line">            dis[z]=dis[x]+1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    h++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</details>
+
+
+<p>这有点类似于前面讲的虚点连边的那道题。</p>
+<p>我讲的可能比较菜，可以画图理解。</p>
+<p>##图论中要注意的坑<br>简单列述几个小问题</p>
+<p>$1.$ 先看眼是有向图还是无向图，无向图数组开两倍。</p>
+<p>$2.$ 如果题目中没有声明无自环和重边，需要注意</p>
+<p>$3.$ 有些遍历的题要考虑环，否则可能死循环，可以使用缩点</p>
+<p>$4.$ 如果题目中边权小于等于零，要考虑负环、零环的情况</p>
+<p>$5.$ 跑最短路的时候要赋初值。</p>
+<p>$6.$ 关于 $Spfa$ ，能不用还是不用吧，毕竟容易被卡。</p>
+
+                </div>
+            </div>
+    
+            
+<nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2024/09/01/hello-world/">
+        Previous post<br>Hello World
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2019/10/03/%E9%A3%8E%E4%B8%AD%E6%9C%89%E9%9F%B3%E6%B2%99%E4%B8%8A%E6%9C%89%E5%8D%B0%E5%85%89%E4%B8%AD%E6%9C%89%E5%BD%B1/">
+        Next post<br>僕、最近昔の深い物思いに沈んでいた
+    </a>
+    
+</nav>
+
+
+    
+            
+
+<div class="post-comment-wrapper-giscus">
+    <div class="giscus"></div>
+</div>
+
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2024 <a href="http://example.com">iMeThi7ck</a>
+</div>
+</div>
+
+</div>
+
+
+<script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://lib.baomitu.com/popper.js/1.14.4/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://lib.baomitu.com/twitter-bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://lib.baomitu.com/vue/2.5.17/vue.min.js" crossorigin="anonymous"></script>
+<script src="https://lib.baomitu.com/smooth-scroll/14.2.1/smooth-scroll.min.js" crossorigin="anonymous"></script>
+<script src="/js/journal.min.js?73502480"></script>
+
+
+
+
+
+
+</body>
+</html>
