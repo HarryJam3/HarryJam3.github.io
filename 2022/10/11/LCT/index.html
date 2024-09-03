@@ -1,0 +1,290 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>浅析LCTの初步使用及具体操作 - iMeThi7ck</title>
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="John Doe">
+<meta name="description" content="动态树问题，是一类要求维护一个有根树森林，支持对树的分割，合并等操作的问题，简称lct">
+<meta name="keywords" content="">
+
+<link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml">
+
+    <meta charset="utf-8">
+    <meta name="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="renderer" content="webkit">
+    <meta name="theme-color" content="#ffffff">
+    
+
+<link rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="/css/journal.css?34957006">
+
+
+<link rel="stylesheet" href="https://lib.baomitu.com/highlight.js/11.2.0/styles/github.min.css" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora|Montserrat|Anonymous+Pro:400|Material+Icons">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+<body>
+<div id="top"></div>
+
+<div id="app">
+<div class="single-column-drawer-container" ref="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            <a class="a-block drawer-menu-item false" href="http://example.com">
+                Home
+            </a>
+
+            
+                
+                    <a class="a-block drawer-menu-item false"
+                       href="/archives/">
+                        归档
+                    </a>
+                
+                    <a class="a-block drawer-menu-item false"
+                       href="/tags/">
+                        标签
+                    </a>
+                
+                    <a class="a-block drawer-menu-item false"
+                       href="/friends/">
+                        朋友们
+                    </a>
+                
+                    <a class="a-block drawer-menu-item false"
+                       href="/about-me/">
+                        关于我
+                    </a>
+                
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav ref="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div ref="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a ref="navTitle" class="navbar-brand" href="/">
+            iMeThi7ck
+        </a>
+    </div>
+</nav>
+<div class="single-column-header-container" ref="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="/">
+        <div class="single-column-header-title">iMeThi7ck</div>
+        <div class="single-column-header-subtitle"></div>
+    </a>
+</div>
+
+<div ref="sideContainer" class="side-container">
+    <a class="a-block nav-head false" href="/">
+        <div class="nav-title">
+            iMeThi7ck's Blog
+        </div>
+        <div class="nav-subtitle">
+            寓清于浊，以屈为伸
+        </div>
+    </a>
+
+    <div class="nav-link-list">
+        
+            
+                <a class="a-block nav-link-item false"
+                   href="/archives/">
+                    归档
+                </a>
+            
+                <a class="a-block nav-link-item false"
+                   href="/tags/">
+                    标签
+                </a>
+            
+                <a class="a-block nav-link-item false"
+                   href="/friends/">
+                    朋友们
+                </a>
+            
+                <a class="a-block nav-link-item false"
+                   href="/about-me/">
+                    关于我
+                </a>
+            
+        
+    </div>
+
+    
+    <div class="nav-footer">
+        Proudly published with Hexo<br>
+        
+        Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+        
+        &copy; 2024 <a href="http://example.com">iMeThi7ck</a>
+    </div>
+</div>
+
+<div ref="extraContainer" class="extra-container">
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top" :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+
+        
+    </div>
+</div>
+
+
+
+<div ref="streamContainer" class="stream-container">
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            <div class="post-head-wrapper"
+                 style="background-image: url('https://cdn.luogu.com.cn/upload/image_hosting/7jjmy6l6.png')">
+                <div class="post-title">
+                    浅析LCTの初步使用及具体操作
+                    <div class="post-meta">
+                        <time datetime="2022-10-11T01:00:00.000Z" itemprop="datePublished">
+                            2022-10-11 09:00
+                        </time>&nbsp;
+                        
+    
+                        
+                        
+                        <i class="material-icons" style="">label</i>
+                        
+                        <a href='/tags/树的维护/'>树的维护</a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="post-body-wrapper">
+                <div class="post-body">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#0x01-%E9%97%B2%E8%AF%9D-%C2%B7-LCT-%E7%9A%84%E7%94%A8%E9%80%94%E4%BB%A5%E5%8F%8A%E5%85%B7%E4%BD%93%E6%80%9D%E8%B7%AF"><span class="toc-number">1.</span> <span class="toc-text">$0x01$  闲话 · $LCT$的用途以及具体思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x02-%E9%97%B2%E8%AF%9D-%C2%B7-%E5%85%B3%E4%BA%8E-splay"><span class="toc-number">2.</span> <span class="toc-text">$0x02$  闲话 · 关于$splay$</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#0x03-LCT-%E7%9A%84%E6%80%9D%E8%B7%AF%E5%92%8C%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-number">3.</span> <span class="toc-text">$0x03$  $LCT$的思路和基础操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80-%E4%B8%BB%E8%A6%81%E6%80%9D%E8%B7%AF"><span class="toc-number">3.1.</span> <span class="toc-text">一 主要思路</span></a></li></ol></li></ol>
+                    <h2 id="0x01-闲话-·-LCT-的用途以及具体思路"><a href="#0x01-闲话-·-LCT-的用途以及具体思路" class="headerlink" title="$0x01$  闲话 · $LCT$的用途以及具体思路"></a>$0x01$  闲话 · $LCT$的用途以及具体思路</h2><p>$LCT$是啥？百度一下的话……貌似是一种检查妇科病的东西？<del>Oier的口味可是真不一般啊</del></p>
+<p>咳，其实在我最近只是浅浅地学了一部分的基础上，窝觉得$LCT$其实就是一个用来维护森林连通性的。</p>
+<p>嗯……因为其独特的性质所以也可以顺便维护好多东西，什么链上的最大值啊，链上的权值和啊……都可以维护——或者说，$LCT$是更加全能的树剖。</p>
+<p>但其实吧……$LCT$打板子是很简单的，但是真正理解却一点儿也不简单。</p>
+<p>因为本身$splay$就很麻烦了，况且$splay$之前一直用于维护数列。</p>
+<p>要知道，此处的$splay$可是作为辅助树，维护一整个森林，并且可以支持序列中几乎全部操作——这就大大增高了理解难度。举个例子，你曾经认为已经难以理解、或者说不可以做的、比较复杂的区间翻转$Luogu3391$，在$LCT$里面有十分全面的涉及，但是被精简到了只有两行是用来描述这个内容的。</p>
+<p>显而易见的是，$LCT$虽然常数十分的大，但代码十分的短，比一棵完整的平衡树短了不少（亲测$50+$行），与$FFT$（快速傅里叶变换）一样具有着华丽的可观赏性，但是隐藏在之后的思维难度同样不可小觑。</p>
+<p>也就是说我们是不是学的太草率、太浮躁了呢？快餐式地学完$LCT$，网上的每一篇博客都包教包会。</p>
+<p>但是我今天要整理的，是对于$LCT$真正的理解。希望各位看到这篇拙作的人可以获得一些什么。</p>
+<h2 id="0x02-闲话-·-关于-splay"><a href="#0x02-闲话-·-关于-splay" class="headerlink" title="$0x02$  闲话 · 关于$splay$"></a>$0x02$  闲话 · 关于$splay$</h2><p>道理我都懂，要想动态拆删一些东西，辅助树的形态可以改变是先决条件。看上去平衡树好像是个不错的选择，但是，选哪个作为辅助树呢？后宫佳丽三千我该翻谁的牌子呢$qwq$</p>
+<p>历史的重任最后落到了$splay$​的身上。然后$splay$​他居然傲娇了：</p>
+<p><img src="https://img2018.cnblogs.com/blog/1452231/201902/1452231-20190219115345555-1738304455.png"></p>
+<p>……</p>
+<p>好吧，由于某些<del>神犇也不知道的</del>原因，如果不用$splay$的话，复杂度是均摊$O(nlog2n)$, 而用$splay$就可以做到均摊$O(nlogn)$ ……但事实上，$splay$确实有他独特的性质，比如旋转到根啊之类的，比起其他种类的平衡树而言，更加适合$LCT.$</p>
+<h2 id="0x03-LCT-的思路和基础操作"><a href="#0x03-LCT-的思路和基础操作" class="headerlink" title="$0x03$  $LCT$的思路和基础操作"></a>$0x03$  $LCT$的思路和基础操作</h2><h3 id="一-主要思路"><a href="#一-主要思路" class="headerlink" title="一 主要思路"></a>一 主要思路</h3><p>主要思路嘛……</p>
+<p>****大概是基于实链剖分的操作。</p>
+<p>朴素的树剖是重链剖分，大体上就是将整棵树的链划分为轻边和重链，运用巧妙的性质做到$log$级别。而遗憾的是$LCT$维护的是森林的连通性，所以只能采用实链剖分。</p>
+<p>而实链剖分大体上就是把边分为虚边和实边。其中实边串联起一个联通块，同一组实边存在、且仅存在于一棵$splay$中。$splay$和$splay$之间由虚边相连。</p>
+<p>实链剖分的好处呢？在于实链剖分是一种动态剖分，他可以随意改变边的虚实属性。而显然，重链剖分由于有着足够的理论依据和逻辑推演，所以轻重链是难以更改，或者说，不可更改的。$So$，实链剖分为动态树的动态打下了基础。</p>
+<p>那么接下来我们来看一个$​LCT$​是如何定义的:</p>
+<p>首先，一棵$LCT$​管控的是一对分散的点，点以几棵分散的splay​splay​的形式聚集。起初整棵LCT​LCT​是没有任何联系的，各自为战，各自为根。我们接下来会看到的$access$​、$makeroot$​等操作，都是在自己的联通块儿内部进行的操作。换句话讲，$LCT$​维护的是有根森林，即组成森林的每个联通块都有其唯一的根。</p>
+<p>实边串联起一个联通块，同一组实边存在、且仅存在于一棵splaysplay中。splaysplay和splaysplay之间由虚边相连。只有实边是有效的，虚边可以被认为不存在。但是两种边都没有用到显式存储，都是通过$splay$中的$Son$数组和$Fa$数组访问的。但虚边和实边的存储有区别：</p>
+<pre><code>虚边是认父不认子，即如果$Fa[x]==y$，那么$y$不存$x$这个儿子，但是$x$存$y$这个父亲。这样做是为了可以$Access$——因为其实在$Access$的子函数$splay$里，发挥作用的实际上是$Fa$指针。
+
+实边是完整的双向存储。
+</code></pre>
+<p>$splay$中维护的是一条从存储上到下按在原树中深度严格递增的路径，且中序遍历$splay$得到的每个点的深度序列严格递增。换句话讲，一个$splay$里面不会出现在原联通块儿（树）中深度相同的两个点。在一棵$splay$中，键值就是原树中的深度。<br>如果$x$是它所在$splay$的最左边的点，那么它在原森林里的父亲是$x$所在$splay$的根的$fa$, 否则就是$x$在$splay$上的前驱.</p>
+<p>待更$……$</p>
+
+                </div>
+            </div>
+    
+            
+<nav class="post-pagination">
+    
+    <a class="newer-posts" href="/2024/09/01/hello-world/">
+        Previous post<br>Hello World
+    </a>
+    
+    <span class="page-number"></span>
+    
+    <a class="older-posts" href="/2022/09/20/iMeThi7ckCode/">
+        Next post<br>iMeThi7ck の 代码规范（During Competitive Programming）
+    </a>
+    
+</nav>
+
+
+    
+            
+
+<div class="post-comment-wrapper-giscus">
+    <div class="giscus"></div>
+</div>
+
+
+
+        </div>
+    </div>
+    <div class="single-column-footer">
+    Proudly published with Hexo<br>
+    
+    Theme <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> by <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a><br>
+    
+    &copy; 2024 <a href="http://example.com">iMeThi7ck</a>
+</div>
+</div>
+
+</div>
+
+
+<script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js" crossorigin="anonymous"></script>
+<script src="https://lib.baomitu.com/popper.js/1.14.4/umd/popper.min.js" crossorigin="anonymous"></script>
+<script src="https://lib.baomitu.com/twitter-bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://lib.baomitu.com/vue/2.5.17/vue.min.js" crossorigin="anonymous"></script>
+<script src="https://lib.baomitu.com/smooth-scroll/14.2.1/smooth-scroll.min.js" crossorigin="anonymous"></script>
+<script src="/js/journal.min.js?45846199"></script>
+
+
+
+
+<script src="https://giscus.app/client.js"
+        
+        data-repo="Sichyj/Sichyj.github.io"
+        
+        data-repo-id="R_kgDOMrEWBA"
+        
+        data-category="Q&amp;A"
+        
+        data-category-id="DIC_kwDOMrEWBM4CiIrI"
+        
+        data-mapping="pathname"
+        
+        data-reactions-enabled="1"
+        
+        data-emit-metadata="0"
+        
+        data-theme="light"
+        
+        data-lang="zh-CN"
+        
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+
+</body>
+</html>
