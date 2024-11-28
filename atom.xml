@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-11-28T15:05:39.990Z</updated>
+  <updated>2024-11-28T15:18:34.547Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2024/11/28/Computer/"/>
     <id>http://example.com/2024/11/28/Computer/</id>
     <published>2024-11-28T14:34:34.000Z</published>
-    <updated>2024-11-28T15:05:39.990Z</updated>
+    <updated>2024-11-28T15:18:34.547Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="chrome">Chrome</h2><ul><li>基于本人的谷歌账号将一直沿用，故暂不讨论其插件失效等话题。<ul><li>Carrot 用于 <span class="math inline">\(Codeforces\)</span>的赛中or赛后预测即时分数使用。偶尔失效</li><li>CF Analytics 用于在个人 <spanclass="math inline">\(Codeforces\)</span>主页生成生涯做题扇形统计图，更直观反应训练内容</li><li>Competitive Companion用于快速远程抓取某场比赛中的某道题的样例映射到本地 <spanclass="math inline">\(Sublime Text\)</span></li><li>Enhanced GitHub自动显示每个活动分支中的每个文件大小，显示每个单独文件的下载链接，将文件的内容直接复制到剪贴板，下载文件内容.etc</li><li>HackBar简单抓包，允许用户对网站执行简单自定义HTTP请求，提供简单参数注入</li><li>JSON-handle 树形图直观美观展示 JSON 数据，自动渲染实时编辑</li><li>Mathpix Snip 可以OCR技术识别数学公式，并将其转换为LaTeX代码</li><li>Proxy SwitchyOmega 快速切换和管理浏览器代理设置</li><li>Stylish 网站美化的一个插件</li><li>Twitter Downloader HD 在推特/X上方便下载视频的一个插件_(:з」∠)_</li><li>Wappalyzer 主要用于识别网站所使用的技术栈</li><li>沉浸式翻译 特别好用的网页翻译插件以及支持中英文字幕</li><li>篡改猴/Tampermonkey 脚本管理工具</li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="chrome">Chrome</h2><ul><li>基于本人的谷歌账号将一直沿用，故暂不讨论其插件失效等话题。<ul><li><em>Carrot</em> 用于 Codeforces的赛中or赛后预测即时分数使用。偶尔失效</li><li><em>CF Analytics</em> 用于在个人 Codeforces主页生成生涯做题扇形统计图，更直观反应训练内容</li><li><em>Competitive Companion</em>用于快速远程抓取某场比赛中的某道题的样例映射到本地 Sublime Text</li><li><em>Enhanced GitHub</em>自动显示每个活动分支中的每个文件大小，显示每个单独文件的下载链接，将文件的内容直接复制到剪贴板，下载文件内容.etc</li><li><em>HackBar</em>简单抓包，允许用户对网站执行简单自定义HTTP请求，提供简单参数注入</li><li><em>JSON-handle</em> 树形图直观美观展示 JSON数据，自动渲染实时编辑</li><li><em>Mathpix Snip</em>可以OCR技术识别数学公式，并将其转换为LaTeX代码</li><li><em>Proxy SwitchyOmega</em> 快速切换和管理浏览器代理设置</li><li><em>Stylish</em> 网站美化的一个插件</li><li><em>Twitter Downloader HD</em>在推特/X上方便下载视频的一个插件_(:з」∠)_</li><li><em>Wappalyzer</em> 主要用于识别网站所使用的技术栈</li><li><em>沉浸式翻译</em> 特别好用的网页翻译插件以及支持中英文字幕</li><li><em>篡改猴/Tampermonkey</em> 脚本管理工具</li></ul></li></ul>]]></content>
     
     
     <summary type="html">个人 Windows 电脑软件使用现状以及今后如若换电脑的配置回溯方案处理，借此机会盘点我对平日用到的各类软件的一些观点分享，部分整理安装方式以及地址。</summary>
