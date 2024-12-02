@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-11-28T15:47:57.805Z</updated>
+  <updated>2024-12-02T16:32:48.794Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Pr视频剪辑学习以及自用笔记</title>
+    <link href="http://example.com/2024/12/01/Premiere/"/>
+    <id>http://example.com/2024/12/01/Premiere/</id>
+    <published>2024-12-01T05:55:34.000Z</published>
+    <updated>2024-12-02T16:32:48.794Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="界面认识">界面认识</h2><p>大致分为四个板块，左上角预览素材，右上角预览成片，左下角是素材库，右下角是可视化剪辑处。</p><p><imgsrc="https://cdn.luogu.com.cn/upload/image_hosting/33ho9fta.png" /></p><h2 id="功能板块">功能板块</h2><h3 id="如何加字幕">如何加字幕</h3><p>上方工具栏有 <code>窗口/Windows</code> 选项，展开有<code>文本/Text</code> 选项，点击即可在左上板块产生一个文本区，点击添加<code>新字幕分段</code>即可创建新的字幕。或点击右上板块视图内部即可划出一片字幕区域。</p><p>右下板块会生成 <spanclass="math inline">\(\textcolor{orange}{深黄色的字幕轨道}\)</span>，左键水平拖拽将其与下方的 <code>A1,A2,A3</code>中的语音轨道合理对应即可。</p><h3id="如何调节段落音频的音量分贝大小">如何调节段落音频的音量分贝大小</h3><p>左键选中 或 按住 <code>Shift</code> 选中多段音频后，右键展开点击<code>音频增益</code> ，调整增益值 <code>&gt;0</code>即是增大音量，<code>&lt;0</code> 即是减小音量。</p>]]></content>
+    
+    
+    <summary type="html">Adobe Premiere 一款非线性视频编辑软件，广泛应用于视频后期制作。纯萌新剪刀手的学习路线记录^_^</summary>
+    
+    
+    
+    
+    <category term="学习日常笔记" scheme="http://example.com/tags/%E5%AD%A6%E4%B9%A0%E6%97%A5%E5%B8%B8%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>关于我的电脑的一些配置以及工具备份（自用向</title>
     <link href="http://example.com/2024/11/28/Computer/"/>
     <id>http://example.com/2024/11/28/Computer/</id>
     <published>2024-11-28T14:34:34.000Z</published>
-    <updated>2024-11-28T15:47:57.805Z</updated>
+    <updated>2024-12-02T16:57:38.972Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="office-area">Office Area</h1><h2 id="chrome">Chrome</h2><ul><li>基于本人的谷歌账号将一直沿用，故暂不讨论其插件失效等话题。<ul><li><em>Carrot</em> 用于 Codeforces的赛中or赛后预测即时分数使用。偶尔失效</li><li><em>CF Analytics</em> 用于在个人 Codeforces主页生成生涯做题扇形统计图，更直观反应训练内容</li><li><em>Competitive Companion</em>用于快速远程抓取某场比赛中的某道题的样例映射到本地 Sublime Text</li><li><em>Enhanced GitHub</em>自动显示每个活动分支中的每个文件大小，显示每个单独文件的下载链接，将文件的内容直接复制到剪贴板，下载文件内容.etc</li><li><em>HackBar</em>简单抓包，允许用户对网站执行简单自定义HTTP请求，提供简单参数注入</li><li><em>JSON-handle</em> 树形图直观美观展示 JSON数据，自动渲染实时编辑</li><li><em>Mathpix Snip</em>可以OCR技术识别数学公式，并将其转换为LaTeX代码</li><li><em>Proxy SwitchyOmega</em> 快速切换和管理浏览器代理设置</li><li><em>Stylish</em> 网站美化的一个插件</li><li><em>Twitter Downloader HD</em>在推特/X上方便下载视频的一个插件_(:з」∠)_</li><li><em>Wappalyzer</em> 主要用于识别网站所使用的技术栈</li><li><em>沉浸式翻译</em> 特别好用的网页翻译插件以及支持中英文字幕</li><li><em>篡改猴/Tampermonkey</em> 脚本管理工具，必备脚本如下<ul><li>Codeforces Better!</li><li>Atcoder Better!</li><li>OCS 网课助手，刷网课常用</li><li>FCQ 全网答题器，水作业考试常用</li></ul></li></ul></li></ul><h2 id="即时通讯工具">即时通讯工具</h2><ul><li>QQNT，微信，<ahref="https://desktop.telegram.org/">Telegram</a>，Discord，Oopz，飞书</li></ul><h2 id="文件全局搜索工具">文件全局搜索工具</h2><h3 id="everything">Everything</h3><ul><li><p>开机自启动默认扫盘，影响启动速度。但是在 Windows NTFS 和 ReFS文件系统中胜在搜索效率极高，响应快。</p><p>地址：https://www.voidtools.com/zh-cn/downloads/</p></li></ul><h3 id="utools">Utools</h3><ul><li><p>内置 Everything ，特定需求下触发。<code>Alt+Space</code>触发搜索方便快捷，无需充值会员。</p></li><li><p>包含各种小工具 eg.内网IP直接复制到剪切板，便于寻找一些设置项</p><p>下载地址：https://www.u-tools.cn/</p></li></ul><h2 id="磁盘空间分析软件">磁盘空间分析软件</h2><h3 id="spacesniffer">SpaceSniffer</h3><ul><li><p>主要用于磁盘空间的可视化管理和优化</p><p>下载地址：https://www.fosshub.com/SpaceSniffer.html</p></li></ul><h2 id="硬件自查工具">硬件自查工具</h2><h3 id="cpu-z">CPU-Z</h3><ul><li><p>提供关于计算机硬件和系统配置的详细信息，包括处理器、主板、内存、显卡等关键组件的技术规格和性能数据</p><p>下载地址：https://www.cpuid.com/softwares/cpu-z.html/</p></li></ul><h3 id="gpu-z">GPU-Z</h3><ul><li><p>显卡信息监测工具，能够提供详尽的显卡硬件信息以及实时监控显卡的运行状态</p><p>下载地址：https://www.techpowerup.com/download/techpowerup-gpu-z/</p></li></ul><h1 id="gaming-area">Gaming Area</h1><h2 id="steam">Steam</h2><ul><li><p>最大的 PC 游戏数字发行平台</p><p>下载地址：https://store.steampowered.com/about/</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="office-area">Office Area</h1><h2 id="chrome">Chrome</h2><ul><li>基于本人的谷歌账号将一直沿用，故暂不讨论其插件失效等话题。<ul><li><em>Carrot</em> 用于 Codeforces的赛中or赛后预测即时分数使用。偶尔失效</li><li><em>CF Analytics</em> 用于在个人 Codeforces主页生成生涯做题扇形统计图，更直观反应训练内容</li><li><em>Competitive Companion</em>用于快速远程抓取某场比赛中的某道题的样例映射到本地 Sublime Text</li><li><em>Enhanced GitHub</em>自动显示每个活动分支中的每个文件大小，显示每个单独文件的下载链接，将文件的内容直接复制到剪贴板，下载文件内容.etc</li><li><em>HackBar</em>简单抓包，允许用户对网站执行简单自定义HTTP请求，提供简单参数注入</li><li><em>JSON-handle</em> 树形图直观美观展示 JSON数据，自动渲染实时编辑</li><li><em>Mathpix Snip</em>可以OCR技术识别数学公式，并将其转换为LaTeX代码</li><li><em>Proxy SwitchyOmega</em> 快速切换和管理浏览器代理设置</li><li><em>Stylish</em> 网站美化的一个插件</li><li><em>Twitter Downloader HD</em>在推特/X上方便下载视频的一个插件_(:з」∠)_</li><li><em>Wappalyzer</em> 主要用于识别网站所使用的技术栈</li><li><em>哔哩哔哩Downloader</em> 支持bilibili.com的视频一键下载</li><li><em>沉浸式翻译</em> 特别好用的网页翻译插件以及支持中英文字幕</li><li><em>篡改猴/Tampermonkey</em> 脚本管理工具，必备脚本如下<ul><li>Codeforces Better!</li><li>Atcoder Better!</li><li>OCS 网课助手，刷网课常用</li><li>FCQ 全网答题器，水作业考试常用</li></ul></li></ul></li></ul><h2 id="即时通讯工具">即时通讯工具</h2><ul><li>QQNT，微信，<ahref="https://desktop.telegram.org/">Telegram</a>，Discord，Oopz，飞书</li></ul><h2 id="文件全局搜索工具">文件全局搜索工具</h2><h3 id="everything">Everything</h3><ul><li><p>开机自启动默认扫盘，影响启动速度。但是在 Windows NTFS 和 ReFS文件系统中胜在搜索效率极高，响应快。</p><p>地址：https://www.voidtools.com/zh-cn/downloads/</p></li></ul><h3 id="utools">Utools</h3><ul><li><p>内置 Everything ，特定需求下触发。<code>Alt+Space</code>触发搜索方便快捷，无需充值会员。</p></li><li><p>包含各种小工具 eg.内网IP直接复制到剪切板，便于寻找一些设置项</p><p>下载地址：https://www.u-tools.cn/</p></li></ul><h2 id="磁盘空间分析软件">磁盘空间分析软件</h2><h3 id="spacesniffer">SpaceSniffer</h3><ul><li><p>主要用于磁盘空间的可视化管理和优化</p><p>下载地址：https://www.fosshub.com/SpaceSniffer.html</p></li></ul><h2 id="硬件自查工具">硬件自查工具</h2><h3 id="cpu-z">CPU-Z</h3><ul><li><p>提供关于计算机硬件和系统配置的详细信息，包括处理器、主板、内存、显卡等关键组件的技术规格和性能数据</p><p>下载地址：https://www.cpuid.com/softwares/cpu-z.html/</p></li></ul><h3 id="gpu-z">GPU-Z</h3><ul><li><p>显卡信息监测工具，能够提供详尽的显卡硬件信息以及实时监控显卡的运行状态</p><p>下载地址：https://www.techpowerup.com/download/techpowerup-gpu-z/</p></li></ul><h2 id="网络代理工具">网络代理工具</h2><h3 id="clash-for-windows">Clash for Windows</h3><ul><li><p>帮助用户管理和配置网络代理服务，实现网络流量的转发控制，称为所谓<code>“魔法”</code></p><p>下载地址：https://clashforwindows.org/（非官方）</p></li></ul><h3 id="v2ray">V2ray</h3><ul><li>上手相对容易但是配置写的 <code>JSON</code> 比Clash用的<code>YAML</code>相对难懂下载地址：https://github.com/v2ray/v2ray-core</li></ul><h2 id="大学摸鱼工具">大学摸鱼工具</h2><h3 id="fcq全网答题器">FCQ全网答题器</h3><ul><li>快速且隐秘地完成答题刷课等功能，缺点是要钱买积分。肯定有更好的但是用习惯了懒得找下载地址：https://tcb-w644nfbyxrttaih-2cpr71dbf4b7-1304481250.tcloudbaseapp.com/#/pages/index/index?orgin=group</li></ul><h1 id="gaming-area">Gaming Area</h1><h2 id="steam">Steam</h2><ul><li><p>最大的 PC 游戏数字发行平台</p><p>下载地址：https://store.steampowered.com/about/</p></li></ul><h1 id="网站工具合集">网站工具合集</h1><p><del>似乎偏题了但是不重要</del></p><p>最近在学习剪辑视频的过程中，因为以往打 CTF的比赛经验会有很多方便在网页端处理材料的工具站，事实证明确实如此但是在自己的收藏夹里发现了大量曾经觉得好用爱用的工具站但是现在觉得陌生或生疏。遂整理之。</p><h2 id="acm相关">ACM相关</h2><h3 id="atcoder-problem">AtCoder Problem</h3><ul><li>https://kenkoooo.com/atcoder/#/table/</li><li>类似的有 CFTracker 地址为https://cftracker.netlify.app/contests</li><li>一个实时集合了每一届 AtCoder / Codeforces比赛的网站，简化了查询题目和整理补题的操作，良心好站</li></ul><h3 id="graph-editor">Graph Editor</h3><ul><li>https://csacademy.com/app/graph_editor/</li><li>方便将图论的样例可视化以及生成图片，如果你没有那么熟悉矢量图 paf的绘制的话，使用它出题也不失为良策</li></ul><h3 id="ecpp-c---try-it-online">ecpp + C++ - Try It Online</h3><ul><li>https://tio.run/#ecpp-cpp</li><li>一个可以在线编译 cpp并且方便自定义输入输出的网站，江湖救急必备。</li></ul><h3 id="oj-analyzer">OJ Analyzer</h3><ul><li>https://ojhunt.com/statistics</li><li>它可以统计你在各大 OnlineJudge 上的刷题数，形成汇总数据。</li></ul><h3 id="cppreference.com">cppreference.com</h3><ul><li>https://zh.cppreference.com/</li><li>提供了 C++ 语言、标准库和其他常用库的详细文档，已经包含了 C++20的内容，并且正在更新 C++23</li></ul><h3 id="clist">CLIST</h3><ul><li>https://clist.by/</li><li>提供了各种编程竞赛、CTF比赛等活动的日程和信息。可以在这里找到即将开始或正在进行的比赛，并查看它们的结束时间、持续时长和相关链接</li></ul><h2 id="ctf相关">CTF相关</h2>]]></content>
     
     
     <summary type="html">个人 Windows 电脑软件使用现状以及今后如若换电脑的配置回溯方案处理，借此机会盘点我对平日用到的各类软件的一些观点分享，部分整理安装方式以及地址。</summary>
